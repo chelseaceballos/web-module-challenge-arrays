@@ -67,9 +67,10 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors(Array){
    console.log(originalFlavors.length)
-   if (originalFlavors.length > 31);
-   return false;
+   if (originalFlavors.length < 31);
+   return true;
    }
+   console.log(is31Flavors)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -172,10 +173,9 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(/* array and string*/){
+    /* your code */
 }
-
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -189,8 +189,14 @@ Use the getAverageWordLength function below to do the following:
     For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-    /*code here*/
+function getAverageWordLength(array, string){
+    let newArray = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i].includes(string)){
+            newArray.push(array[i])
+        }
+    }
+    return newArray
 }
 
 
