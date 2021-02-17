@@ -65,7 +65,7 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(arr){
+function is31Flavors(Array){
    console.log(originalFlavors.length)
    if (originalFlavors.length > 31);
    return false;
@@ -84,12 +84,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-const newFlavor = [...originalFlavors];
-function addFlavor(arr){
-    
-   newFlavor.unshift('Rainbow Sherbert');
+
+function addFlavor(array , flavor){
+    array.unshift(flavor) 
+   return array;
 }
-console.log(newFlavor);
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -102,12 +102,12 @@ Use the removeLastFlavor function below to do the following:
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-const removeFlavor = [...originalFlavors]
-function removeLastFlavor(arr){
-   originalFlavors.pop();
-}
-console.log(removeFlavor)
 
+function removeLastFlavor(array){
+    array.pop();
+    return array;
+}
+ console.log(removeLastFlavor(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that returns a flavor at a given index in the array.
@@ -140,8 +140,14 @@ Use the removeFlavorByName function below to do the following:
     HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+function removeFlavorByName(array, string){
+    //write for loop to check every itm in the array and see if it matches
+    for(let i=0 ; i < array.length; i++){
+    if(array[i]===string){
+        array.splice(i,1);
+    }    
+    }
+    return array;
 }
 
 
