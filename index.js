@@ -84,10 +84,12 @@ Use the addFlavor function below to do the following:
 */
 
 
+const newFlavor = [...originalFlavors];
 function addFlavor(arr){
-   arr.unshift('Rainbow Sherbert');
+    
+   newFlavor.unshift('Rainbow Sherbert');
 }
-console.log(originalFlavors);
+console.log(newFlavor);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -100,11 +102,11 @@ Use the removeLastFlavor function below to do the following:
 
     For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
-
-function removeLastFlavor(/*your code here*/){
-   /*your code here*/
+const removeFlavor = [...originalFlavors]
+function removeLastFlavor(arr){
+   originalFlavors.pop();
 }
-
+console.log(removeFlavor)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
